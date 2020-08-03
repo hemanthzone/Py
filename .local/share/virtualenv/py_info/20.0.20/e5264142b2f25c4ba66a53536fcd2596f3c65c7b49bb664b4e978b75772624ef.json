@@ -1,0 +1,67 @@
+{
+  "st_mtime": 1589188534.4468088,
+  "path": "/root/.pyenv/versions/3.7.2/bin/python",
+  "content": {
+    "platform": "linux",
+    "implementation": "CPython",
+    "version_info": {
+      "major": 3,
+      "minor": 7,
+      "micro": 2,
+      "releaselevel": "final",
+      "serial": 0
+    },
+    "architecture": 64,
+    "version": "3.7.2 (default, May 11 2020, 09:14:32) \n[GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]",
+    "os": "posix",
+    "prefix": "/root/.pyenv/versions/3.7.2",
+    "base_prefix": "/root/.pyenv/versions/3.7.2",
+    "real_prefix": null,
+    "base_exec_prefix": "/root/.pyenv/versions/3.7.2",
+    "exec_prefix": "/root/.pyenv/versions/3.7.2",
+    "executable": "/root/.pyenv/versions/3.7.2/bin/python",
+    "original_executable": "/root/.pyenv/versions/3.7.2/bin/python",
+    "system_executable": "/root/.pyenv/versions/3.7.2/bin/python",
+    "has_venv": true,
+    "path": [
+      "/root/.pyenv/versions/3.7.2/lib/python3.7/site-packages/virtualenv/discovery",
+      "/root/.pyenv/versions/3.7.2/lib/python37.zip",
+      "/root/.pyenv/versions/3.7.2/lib/python3.7",
+      "/root/.pyenv/versions/3.7.2/lib/python3.7/lib-dynload",
+      "/root/.pyenv/versions/3.7.2/lib/python3.7/site-packages"
+    ],
+    "file_system_encoding": "utf-8",
+    "stdout_encoding": "UTF-8",
+    "sysconfig_paths": {
+      "stdlib": "{installed_base}/lib/python{py_version_short}",
+      "platstdlib": "{platbase}/lib/python{py_version_short}",
+      "purelib": "{base}/lib/python{py_version_short}/site-packages",
+      "platlib": "{platbase}/lib/python{py_version_short}/site-packages",
+      "include": "{installed_base}/include/python{py_version_short}{abiflags}",
+      "scripts": "{base}/bin",
+      "data": "{base}"
+    },
+    "sysconfig": {
+      "makefile_filename": "/root/.pyenv/versions/3.7.2/lib/python3.7/config-3.7m-x86_64-linux-gnu/Makefile"
+    },
+    "sysconfig_vars": {
+      "installed_base": "/root/.pyenv/versions/3.7.2",
+      "platbase": "/root/.pyenv/versions/3.7.2",
+      "abiflags": "m",
+      "base": "/root/.pyenv/versions/3.7.2",
+      "PYTHONFRAMEWORK": "",
+      "py_version_short": "3.7"
+    },
+    "distutils_install": {
+      "purelib": "lib/python3.7/site-packages",
+      "platlib": "lib/python3.7/site-packages",
+      "headers": "include/python3.7m/UNKNOWN",
+      "scripts": "bin",
+      "data": ""
+    },
+    "system_stdlib": "/root/.pyenv/versions/3.7.2/lib/python3.7",
+    "system_stdlib_platform": "/root/.pyenv/versions/3.7.2/lib/python3.7",
+    "max_size": 9223372036854775807,
+    "_creators": null
+  }
+}

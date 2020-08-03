@@ -1,0 +1,45 @@
+#!/usr/bin/env python
+import subprocess
+import sys
+
+
+def _exec_cmd(args):
+    """
+    Function invokes the real `eb` executable within the EBCLI-specifc
+    virtualenv. `KeyboardInterrupt`s are in this parent process as showing
+    the stacktrace associated with this script has no information for
+    the user and is confusing.
+
+    Note that any of the stack traces the subprocess (the real `eb` process)
+    wishes to print will be printed to STDOUT. As such, this wrapper strives
+    to be completely non-intervening.
+
+    In the event of a `KeyboardInterrupt`s, it is possible that the child might
+    not have returned leaving the returncode `None`. In this situation, it
+    is prudent to wait for the subprocess to exit normally.
+    
+    Outside `KyeboardInterrupts`s, it is unclear whether it is possible for
+    the return code of the subprocess to remain None. In all such cases, the
+    wrapper will assume a failure and return a non-zero exit code.
+    """
+    p = subprocess.Popen(args)
+    try:
+        p.communicate()
+    except KeyboardInterrupt:
+        p.wait()
+
+    if p.returncode is None:
+        print('Assuming failure because `eb` returned with an indeterminate exit-code.')
+        return 1
+
+    return p.returncode
+
+
+activate_this = "/root/.ebcli-virtual-env/bin/activate_this.py"
+
+if sys.version_info < (3, 0):
+    execfile(activate_this, dict(__file__=activate_this))
+else:
+    exec(open(activate_this).read(), dict(__file__=activate_this))
+
+exit(_exec_cmd(['/root/.ebcli-virtual-env/bin/eb'] + sys.argv[1:]))
